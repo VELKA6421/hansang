@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="전통 한식부터 새로운 퓨전 한식까지, 한국의 맛을 만나고 나누는 한상.">
+  <meta name="theme-color" content="#f6f3eb"><title>한상 — 한국의 맛을 만나다</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="style.css">
+  <script src="config.js"></script><script defer src="data.js"></script><script defer src="assets/vendor/supabase.js"></script><script defer src="app.js"></script>
+</head>
+<body>
+  <a class="skip" href="#main">본문으로 건너뛰기</a>
+  <header><a class="brand" href="#/" aria-label="한상 홈"><span class="seal">한</span>한상<span class="brand-en">HANSANG</span></a><nav aria-label="주 메뉴"><a href="#/">홈</a><a href="#/explore">음식 둘러보기</a><a href="#/story">한식 이야기</a></nav><a class="header-cta" href="#/explore">우리의 맛 찾기 <span>↗</span></a></header>
+  <main id="main" tabindex="-1"></main>
+  <footer><a class="brand" href="#/"><span class="seal">한</span>한상</a><p>오래된 정성에 새로운 취향을 더하다.<br>우리의 식탁에서 시작되는 한국의 이야기.</p><span>한국의 맛을 만나다 · HANSANG<br><small>음식 이미지는 AI로 제작한 연출 이미지입니다.</small></span></footer>
+  <dialog id="editor"><form id="post-form"><div class="dialog-head"><div><span class="eyebrow">OUR FOOD JOURNAL</span><h2 id="editor-title">맛있는 이야기 쓰기</h2></div><button type="button" class="icon-btn" data-close="editor" aria-label="닫기">×</button></div><input type="hidden" name="id"><label>작성자<input name="author" maxlength="30" required placeholder="어떤 이름으로 남길까요?"></label><label>제목<input name="title" maxlength="100" required placeholder="이야기의 제목을 입력하세요"></label><label>내용<textarea name="body" maxlength="10000" rows="7" required placeholder="나만의 레시피, 맛있게 먹는 방법, 음식에 담긴 추억을 나눠주세요."></textarea></label><p class="form-note" id="save-note"></p><div class="form-actions"><button type="button" class="button secondary" data-close="editor">취소</button><button class="button" type="submit">이야기 저장 ↗</button></div></form></dialog>
+  <dialog id="reader"><div id="reader-content"></div></dialog>
+  <dialog id="login"><form id="login-form"><div class="dialog-head"><h2>이메일로 로그인</h2><button type="button" class="icon-btn" data-close="login" aria-label="닫기">×</button></div><p>공유 게시판에 글을 남기려면 로그인하세요. 이메일로 로그인 링크를 보내드립니다.</p><label>이메일<input type="email" name="email" required autocomplete="email" placeholder="you@example.com"></label><button class="button" type="submit">로그인 링크 받기 ↗</button><p id="login-status" role="status"></p></form></dialog>
+  <div id="toast" role="status" aria-live="polite"></div>
+</body></html>
